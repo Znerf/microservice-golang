@@ -33,10 +33,10 @@ func createEmailJob(emailJob EmailJob) EmailJob {
 		Post("http://localhost:9000/send-email")
 
 	if err != nil {
-		log.Println("EmailServer: unable to connect PrinterService")
+		log.Println("EmailServer: unable to connect EmailService")
 		return EmailJob{}
 	}
-	log.Printf("EmailServer: created email job #%v via PrinterService", p.JobId)
+	log.Printf("EmailServer: created email job #%v via EmailService", p.JobId)
 	return p
 }
 
