@@ -28,10 +28,10 @@ func main() {
 			return
 		}
 
-		log.Printf("Email Service: creating new Email job from invoice #%v...", emailHandler.Sender)
+		log.Printf("Email Service: creating new Email job #%v...", emailHandler.Sender)
 		rand.Seed(time.Now().UnixNano())
 		emailHandler.JobId = rand.Intn(1000)
-		log.Printf("PrintService: created print job #%v", emailHandler.JobId)
+		log.Printf("EmailService: created print job #%v", emailHandler.JobId)
 
 		//send email here
 		// sendEmail(emailHandler.Subject, emailHandler.Body+" has been shipped")
